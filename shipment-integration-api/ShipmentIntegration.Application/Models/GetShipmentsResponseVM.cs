@@ -3,7 +3,7 @@ namespace ShipmentIntegration.Application.Models;
 public class GetShipmentsResponseVM
 {
     public int Id { get; set; }
-    
+
     // Müşteri Sipariş No
     public string ReferenceNumber { get; set; }
 
@@ -25,6 +25,7 @@ public class GetShipmentsResponseVM
     // Ağırlık Birim
     public WeightType WeightType { get; set; }
 
+    public ShipmentStatusType Status { get; set; }
     // Not
     public string Note { get; set; }
 

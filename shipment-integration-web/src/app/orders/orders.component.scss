@@ -1,0 +1,103 @@
+.container {
+    padding: 40px;
+}
+
+.mat-row {
+    .mat-cell {
+        font-size: 12px;
+        padding: 3px;
+
+        &:first-child {
+            padding-left: 16px;
+            /* ismail gün */
+        }
+
+        &:last-child {
+            padding-right: 16px;
+            /* ismail gün */
+        }
+    }
+}
+
+tr.mat-row {
+    height: 30px;
+
+    &.light-pink {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    &.light-blue {
+        background-color: rgba(0, 142, 255, 0.1) !important;
+        color: black !important;
+    }
+
+    &.red {
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    &.light-yellow {
+        background-color: rgba(255, 255, 0, 0.1);
+    }
+
+    &.light-green {
+        background-color: rgba(0, 255, 0, 0.1) !important;
+    }
+
+    &.light-grey {
+        background-color: gainsboro;
+    }
+
+    &:hover {
+        background-color: grey;
+    }
+
+    td.mat-cell,
+    td.mat-footer-cell {
+        padding: 10px;
+
+        &.centered {
+            text-align: center;
+        }
+
+        &.small-size {
+            font-size: 9px;
+        }
+
+        .mat-icon {
+            line-height: 1.4;
+        }
+
+        &.light-pink {
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+
+        &.light-blue {
+            background-color: rgba(0, 142, 255, 0.1) !important;
+            color: black !important;
+        }
+
+        &.red {
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+
+        &.light-yellow {
+            background-color: rgba(255, 255, 0, 0.1);
+        }
+
+        &.light-green {
+            background-color: rgba(0, 255, 0, 0.1) !important;
+        }
+
+        &.light-grey {
+            background-color: gainsboro;
+        }
+
+        &:hover {
+            background-color: grey;
+        }
+    }
+
+    td.mat-header-cell {
+        padding: 12px !important;
+    }
+}

@@ -6,5 +6,5 @@ public interface IShipmentService
 {
     List<GetShipmentsResponseVM> GetAll();
     Task<CreateShipmentResponseVM> CreateAsync(List<CreateShipmentRequestVM> requestVM);
-    Task<int> UpdateStatusAsync(UpdateShipmentRequestVM requestVM);
+    Task<UpdateShipmentResponseVM> UpdateStatusAsync(UpdateShipmentRequestVM requestVM);
 }

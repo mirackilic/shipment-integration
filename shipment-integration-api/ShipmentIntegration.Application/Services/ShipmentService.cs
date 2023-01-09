@@ -28,11 +28,12 @@ public class ShipmentService : IShipmentService
             Quantity = x.Quantity,
             QuantityUnit = x.QuantityUnit,
             Weight = x.Weight,
+            Status = x.Status,
             WeightType = x.WeightType,
             MaterialCode = x.Material.MaterialCode,
             MaterialName = x.Material.MaterialName,
             Note = x.Note
-        }).ToList();
+        }).OrderByDescending(x => x.Id).ToList();
     }
 
     public async Task<CreateShipmentResponseVM> CreateAsync(List<CreateShipmentRequestVM> requestVM)
@@ -82,7 +83,7 @@ public class ShipmentService : IShipmentService
         return response;
     }
 
-    public async Task<int> UpdateStatusAsync(UpdateShipmentRequestVM requestVM)
+    public async Task<UpdateShipmentResponseVM> UpdateStatusAsync(UpdateShipmentRequestVM requestVM)
     {
         var shipment = await _unitOfWork.GetRepository<Shipment>().GetByIdAsync(requestVM.Id);
 
@@ -110,7 +111,13 @@ public class ShipmentService : IShipmentService
 
         #endregion
 
-        return updatedShipmentId;
+        var response = new UpdateShipmentResponseVM
+        {
+            Id = shipment.Id,
+            ReferenceNumber = shipment.ReferenceNumber,
+        };
+
+        return response;
     }
 
     #region Helpers
